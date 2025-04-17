@@ -471,7 +471,6 @@ header {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-    
 }
 
 .project-link:hover {
@@ -480,21 +479,18 @@ header {
 
 .btn-see-more {
     display: inline-block;
-    background: var(--tersary-color);
-    color: var(--text-tittle);
+    background: var(--primary-color);
+    color: var(--white);
     padding: 1rem 2rem;
     border-radius: 30px;
     text-decoration: none;
     transition: transform 0.3s ease;
     margin-top: 2rem;
-    border:2px solid #030303;
-   
 }
 
 .btn-see-more:hover {
     transform: translateY(-5px);
-    box-shadow: 5px 10px 20px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .projects-categories {
