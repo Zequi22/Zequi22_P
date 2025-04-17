@@ -1,0 +1,300 @@
+/* Variables de colores */
+:root {
+    --primary-color: #1a1a2e;  
+    --header-content: #BBBBBB;
+    --secondary-color: #516783;  
+    --background-color: #0f0f0f;  
+    --tersary-color: beige;
+    --text-color: #ffffff; 
+    --text-tittle: #030303; 
+    --accent-color: #2d8cf0;  /* Azul claro */
+    --white: #ffffff;
+}
+
+/* Reset y estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--header-content);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Header y navegación */
+header {
+    background-color: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--accent-color);
+    color: var(--white);
+    height: 60px; /* Altura fija para el header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 5px solid #030303;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.header-container ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.header-container ul li a:hover {
+    color: var(--text-tittle);
+}
+
+/* Botón de cambio de idioma */
+#language-toggle {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#language-toggle .lang-es.hidden,
+#language-toggle .lang-en.hidden {
+    display: none;
+}
+
+/* Botón de menú (hamburger menu) */
+.hamburger-menu {
+    display: none; /* Ocultar el botón de menú en pantallas grandes */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-menu {
+    display: flex; /* Mostrar el menú completo en pantallas grandes */
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu.active {
+    display: flex; /* Asegurar que el menú se muestre en pantallas grandes */
+}
+
+/* Sección de Proyectos */
+.projects-full {
+    padding: 6rem 0;
+    margin: 11%;
+    background: var(--accent-color);
+    border: 5px solid #030303;
+    box-shadow: 10px 10px black;
+}
+
+.projects-categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background: var(--secondary-color);
+}
+
+.category-btn.active {
+    background: var(--secondary-color);
+    font-weight: bold;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-tittle);
+    
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    display: block; /* Asegúrate de que el valor inicial sea 'block' */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    color: var(--text-tittle);
+    border: 2px solid var(--primary-color);
+    background: var(--tersary-color);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-screenshot {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.1);
+}
+
+.project-details {
+    padding: 1rem;
+}
+
+.project-technologies {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.project-technologies span {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-btn {
+        font-size: 0.9rem;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Mostrar el botón de menú en pantallas pequeñas */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 250px;
+        height: auto;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+        z-index: 1000;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-menu.active {
+        left: auto;
+        right: 5%;
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-screenshot {
+        height: 150px;
+    }
+}

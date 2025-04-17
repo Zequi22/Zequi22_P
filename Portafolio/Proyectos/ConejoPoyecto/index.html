@@ -1,0 +1,93 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo de los Conejos - Descubre la Magia de Estos Fascinantes Animales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='white'%3E%3Cpath d='M50 20 Q30 40, 50 60 Q70 40, 50 20 Z M30 60 Q10 80, 30 100 Q50 80, 30 60 Z M70 60 Q90 80, 70 100 Q50 80, 70 60 Z M50 60 Q70 80, 50 100 Q30 80, 50 60 Z'/%3E%3C/svg%3E" alt="Rabbit Logo">
+            Mundo de los Conejos
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span>☰</span>
+        </label>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tipos-de-conejos.html">Tipos de Conejos</a></li>
+                <li><a href="alimentacion.html">Alimentación</a></li>
+                <li><a href="cuidados.html">Cuidados</a></li>
+                <li><a href="salud.html">Salud</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenidos al Mundo de los Conejos</h1>
+                <p class="subtitle">Descubre la Magia de Estos Adorables Compañeros</p>
+                
+                <div class="intro-description">
+                    <p>Los conejos son mucho más que simples mascotas. Son criaturas fascinantes con una rica historia, comportamientos únicos y una increíble diversidad. En este sitio, te invitamos a explorar el fascinante universo de estos mamíferos lagomorfos.</p>
+                    
+                    <p>Nuestro objetivo es proporcionarte información completa, práctica y científica sobre conejos, desde sus orígenes salvajes hasta su domesticación, pasando por sus cuidados, salud y su impresionante rol en diferentes culturas.</p>
+                </div>
+
+                <div class="quick-sections">
+                    <a href="tipos-de-conejos.html" class="btn">Descubre las Razas</a>
+                    <a href="cuidados.html" class="btn btn-secondary">Aprende a Cuidarlos</a>
+                </div>
+            </div>
+
+            <div class="rabbit-carousel">
+                <div class="carousel-container">
+                    <img src="https://png.pngtree.com/thumb_back/fw800/background/20230529/pngtree-brown-rabbit-standing-in-green-grass-image_2680570.jpg" alt="Conejo 1" class="carousel-image active">
+                    <img src="https://www.zooplus.es/magazine/wp-content/uploads/2019/04/zweifarbig-kaninchen-im-grass.jpg" alt="Conejo 2" class="carousel-image">
+                    <img src="https://cdn0.bioenciclopedia.com/es/posts/5/3/5/conejo_535_orig.jpg" alt="Conejo 3" class="carousel-image">
+                    <img src="https://t1.ea.ltmcdn.com/es/posts/6/8/8/comportamiento_de_los_conejos_24886_600.jpg" alt="Conejo 4" class="carousel-image">
+                </div>
+            </div>
+
+            <div class="rabbit-animation">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path id="bunnyPath" d="M50,100 Q100,50 150,100 T250,100" fill="none" stroke="none"/>
+                    <circle id="bunny" cx="100" cy="100" r="20" fill="#FFB6C1"/>
+                    <circle id="bunnyEye" cx="90" cy="90" r="3" fill="black"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">🐾</div>
+                <h3>Razas Únicas</h3>
+                <p>Explora la diversidad de conejos, desde gigantes amigables hasta enanos adorables.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🥬</div>
+                <h3>Nutrición Especializada</h3>
+                <p>Guías detalladas sobre alimentación saludable y cuidados nutricionales.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">❤️</div>
+                <h3>Cuidados Integrales</h3>
+                <p>Información completa sobre salud, comportamiento y bienestar.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2023 Mundo de los Conejos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="animations.js"></script>
+</body>
+</html>
