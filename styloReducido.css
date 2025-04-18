@@ -1,5 +1,6 @@
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .header-container {
         position: relative;
         display: flex;
@@ -22,7 +23,6 @@
         height: 20px;
         cursor: pointer;
         z-index: 1100;
-        
     }
 
     .hamburger-menu span {
@@ -42,11 +42,11 @@
 
     .hamburger-menu.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
-  
-  }
-  .header-container ul li a:hover {
-    color: var(--accent-color);
-}
+    }
+
+    .header-container ul li a:hover {
+        color: var(--accent-color);
+    }
 
     .nav-menu {
         position: fixed;
@@ -68,7 +68,6 @@
         transform: translateX(100%);
         opacity: 0;
         visibility: hidden;
-        
     }
 
     .nav-menu.active {
@@ -90,7 +89,9 @@
     }
 
     .profile-content {
+        grid-template-columns: 1fr;
         flex-direction: column;
+        margin-top: 0%;
     }
 
     .profile-text {
@@ -128,12 +129,12 @@
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .project-card {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 1rem;
     }
 
@@ -195,6 +196,7 @@
 }
 
 @media (max-width: 480px) {
+
     .skills-grid,
     .project-grid {
         grid-template-columns: 1fr;
@@ -205,15 +207,36 @@
     }
 
     .video-container {
-        height: 200px;
+
+        height: 300px; /* Aumenta la altura del contenedor */
+        display: flex; /* Usa flexbox para centrar el video */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        overflow: hidden; /* Evita que el video se desborde */
+
+    }
+
+    .background-video {
+       
+        width: auto; /* Permite que el ancho se ajuste */
+        height: 100%; /* El video ocupa toda la altura del contenedor */
+        max-width: none; /* Elimina cualquier restricción de ancho máximo */
+        object-fit: contain; /* Asegura que el video se ajuste al contenedor manteniendo su relación de aspecto */
+  
     }
 
     .profile-content {
         margin: 0.5rem;
+        margin-top: 0%;
     }
 
     .profile-overlay {
         padding: 1.5rem;
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 
     .btn-cv {
@@ -228,49 +251,5 @@
     .speech-bubble {
         font-size: 0.9rem;
         padding: 1.5rem;
-    }
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .profile-content {
-        grid-template-columns: 1fr;
-        
-    }
-
-    .video-container {
-        height: 300px;
-    }
-
-    .profile-overlay {
-        align-items: center;
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-section {
-        padding-top: 0px;
-    }
-
-    .video-container {
-        height: 250px;
-    }
-
-    .profile-content {
-        margin: 0.5rem;
-    }
-
-    .profile-overlay {
-        padding: 1.5rem;
-    }
-
-    .btn-cv {
-        width: 100%;
-        text-align: center;
     }
 }
