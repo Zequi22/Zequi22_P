@@ -194,6 +194,12 @@
         display: none;
     }
 }
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .project-screenshot {
+        height: 200px; /* Reducir la altura de las imágenes en pantallas más pequeñas */
+    }
+}
 
 @media (max-width: 480px) {
 
