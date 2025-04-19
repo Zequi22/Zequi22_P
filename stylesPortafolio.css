@@ -556,6 +556,8 @@ header {
     padding: 6rem 0;
     padding: 6rem 0;
     margin: 11%;
+    margin-left: 25%;
+    margin-right: 25%;
     background: rgb(54, 173, 241);
     border:5px solid #030303;
     box-shadow: 20px 15px black;
