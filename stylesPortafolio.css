@@ -6,7 +6,7 @@
     --tersary-color: beige;
     --text-color: #ffffff; 
     --text-tittle: #030303; 
-    --accent-color: #2d8cf0;  /* Azul claro */
+    --accent-color: #6B8E9F;  /* Azul claro */
     --white: #ffffff;
 }
 
@@ -136,10 +136,11 @@ header {
 /* Profile Section */
 .profile-section {
     padding-top: 0; /* Altura del header */
-    min-height: calc(100vh - 60px); /* Resta la altura del header */
+    min-height: calc(50vh - 100px); /* Resta la altura del header */
     align-items: flex-start;
     background: var(--header-content);
     margin-top: 0%;
+    border-bottom: solid 10px #030303;
 }
 
 .profile-content {
@@ -265,16 +266,17 @@ header {
 
 /* SECCIÓN SOBRE MÍ – SPEECH BUBBLE */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
-   
+    
 }
 
 .section-title {
     text-align: left;
     margin-bottom: 2.5rem;
+    margin-left: 10%;
     color: var(--primary-color);
     font-size: 2.8rem;
     font-weight: 900;
@@ -305,13 +307,8 @@ header {
 /* Sección de Habilidades */
 .skills {
     padding: 6rem 0;
-    margin: 20px;
-    margin: 11%;
+    border-bottom: solid 10px #030303;
     background: var(--accent-color);
-    border:5px solid #030303;
-    box-shadow: 20px 15px black;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
 }
 
 .skills-grid {
@@ -319,6 +316,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
     padding: 2rem 0;
+    margin: 5%;
 }
 
 .skill-item {
@@ -365,12 +363,9 @@ header {
 /* Sección Sobre Mí */
 .about {
     padding: 6rem 0;
-    margin: 11%;
-    background: var(--accent-color);
-    border:5px solid #030303;
-    box-shadow: 20px 15px black;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    background: var(--header-content);
+    border-bottom: solid 10px #030303;
+    
 
 }
 .about-content {
@@ -378,6 +373,7 @@ header {
     grid-template-columns: 1.2fr 0.8fr;
     gap: 4rem;
     align-items: center;
+    margin: 10%;
 }
 
 .speech-bubble {
@@ -410,18 +406,16 @@ header {
 /* Sección de Formación */
 .trainings {
     padding: 6rem 0;
-   margin: 11%;
-   background: var(--accent-color);
-   border:5px solid #030303;
-   box-shadow: 20px 15px black;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-bottom: solid 10px #030303;
+    background: var(--accent-color);
 }
 
 .trainings-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .training-item {
@@ -453,12 +447,9 @@ header {
 /* Sección de Proyectos */
 .projects {
     padding: 6rem 0;
-   margin: 11%;
-   background: var(--accent-color);
-   border:5px solid #030303;
-   box-shadow: 20px 15px black;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-bottom: solid 10px #030303;
+    
+    
 }
 
 /* Estilos para project-card */
@@ -466,6 +457,8 @@ header {
     display: flex;
     flex-direction: column; /* Apilar los project-card en columna */
     gap: 2rem; /* Espacio entre las tarjetas */
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .project-card {
@@ -506,6 +499,7 @@ header {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    
 }
 
 .project-link:hover {
@@ -523,6 +517,7 @@ header {
     text-decoration: none;
     transition: transform 0.3s ease;
     margin-top: 2rem;
+    margin-left: 10%;
 }
 
 .btn-see-more:hover {
@@ -559,8 +554,13 @@ header {
 /* Sección de Contacto */
 .contact {
     padding: 6rem 0;
-    background: var(--accent-color);
+    padding: 6rem 0;
+    margin: 11%;
+    background: rgb(54, 173, 241);
     border:5px solid #030303;
+    box-shadow: 20px 15px black;
+     border-top-right-radius: 30px;
+     border-bottom-left-radius: 30px;
 }
 
 .contact-methods {
@@ -568,6 +568,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     margin-top: 2rem;
+    margin: 10%;
 }
 
 .contact-method {
