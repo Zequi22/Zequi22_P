@@ -369,39 +369,47 @@ header {
 
 }
 .about-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
     align-items: center;
-    margin: 10%;
+    justify-content: center;
+    margin: auto;
+    max-width: 1000px;
+    
 }
 
 .speech-bubble {
+    position: relative;
     padding: 2.5rem;
     border-radius: 20px;
-    position: relative;
     color: var(--text-tittle);
     border: 2px solid var(--primary-color);
     background: var(--tersary-color);
+    max-width: 500px;
+    min-width: 250px;
+    box-sizing: border-box;
+    font-size: 1.15rem;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  
 }
 
-.speech-bubble::after {
-    content: '';
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-width: 20px;
-    border-style: solid;
-    border-color: transparent transparent transparent var(--secondary-color);
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-pic {
-    width: 100%;
-    max-width: 400px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid var(--primary-color);
 }
+
+
 
 /* Sección de Formación */
 .trainings {
