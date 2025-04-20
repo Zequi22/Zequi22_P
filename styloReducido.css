@@ -135,6 +135,7 @@
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+       
     }
 
     .project-card {
@@ -270,6 +271,7 @@
         margin-right: 5%;
         box-shadow: 10px 10px black;
     }
+    
 }
 
 /* Animacion scroll */
@@ -300,7 +302,7 @@
         scale: 1;
     }
 }
-.skill-item , .training-item , .about-content{
+.skill-item , .training-item , .about-content, .project-card{
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
