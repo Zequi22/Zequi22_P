@@ -350,14 +350,20 @@ header {
 }
 
 .habilidadImagen {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
+    font-size: 4rem; /* Más grande y vistoso */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.3s, filter 0.3s;
+    text-align: center;
 }
 
 .skill-item:hover .habilidadImagen {
-    transform: scale(1.1);
+    filter: drop-shadow(0 4px 16px rgba(0,0,0,0.18));
 }
 
 /* Sección Sobre Mí */
@@ -645,5 +651,77 @@ header {
 
 .method-details a:hover {
     color: var(--accent-color);
+}
+
+.email-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: fit-content;
+}
+
+.email-row .email-icon,
+#copy-email-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.email-row .email-icon:hover,
+#copy-email-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+#email-text {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    user-select: all;
+    background: transparent;
+    padding: 0 0.5rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    margin: 0 0.3rem;
+}
+
+#copy-email-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+#copy-email-btn:hover {
+    background: var(--primary-color);
+}
+
+#copy-email-btn i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+#copy-email-btn:hover i {
+    color: var(--white);
 }
 

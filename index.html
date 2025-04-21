@@ -48,15 +48,19 @@
                     <div class="profile-overlay">
                         <div class="profile-text">
                             <div class="social-icons">
-                                <a href="ezequiel.cam.mar.22@gmail.com" class="social-button" target="_blank">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
                                 <a href="https://github.com/Zequi22" class="social-button" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://linkedin.com/in/tu-usuario" class="social-button" target="_blank">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
+                            </div>
+                            <div class="email-row">
+                                <span class="email-icon"><i class="fas fa-envelope"></i></span>
+                                <span id="email-text">ezequiel.cam.mar.22@gmail.com</span>
+                                <button id="copy-email-btn" title="Copiar correo">
+                                    <i class="fas fa-clipboard"></i>
+                                </button>
                             </div>
                             <a href="#" class="btn-cv">Ver mi CV</a>
                         </div>
@@ -71,23 +75,23 @@
                 <h2 class="section-title" data-lang-es="Habilidades Técnicas" data-lang-en="Technical Skills">Habilidades Técnicas</h2>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <img src="./Imagenes/HTML5_logo_and_wordmark.png" alt="HTML5" class="habilidadImagen">
+                        <i class="fab fa-html5 habilidadImagen" style="color:#e34c26"></i>
                         <h3>HTML5</h3>
                     </div>
                     <div class="skill-item">
-                        <img src="./Imagenes/CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="habilidadImagen">
+                        <i class="fab fa-css3-alt habilidadImagen" style="color:#264de4"></i>
                         <h3>CSS3</h3>
                     </div>
                     <div class="skill-item">
-                        <img src="./Imagenes/226777.png" alt="Java" class="habilidadImagen">
+                        <i class="fab fa-java habilidadImagen" style="color:#007396"></i>
                         <h3>Java</h3>
                     </div>
                     <div class="skill-item">
-                        <img src="./Imagenes/mysql-5-logo-png-transparent.png" alt="MySQL" class="habilidadImagen">
+                        <i class="fas fa-database habilidadImagen" style="color:#00618a"></i>
                         <h3>MySQL</h3>
                     </div>
                     <div class="skill-item">
-                        <img src="./Imagenes/xml.png" alt="XML" class="habilidadImagen">
+                        <i class="fas fa-code habilidadImagen" style="color:#f89820"></i>
                         <h3>XML</h3>
                     </div>
                 </div>
@@ -225,5 +229,16 @@
 
     <script src="language.js"></script>
     <script src="menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var copyBtn = document.getElementById('copy-email-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', function() {
+                    var email = document.getElementById('email-text').textContent;
+                    navigator.clipboard.writeText(email);
+                });
+            }
+        });
+        </script>
 </body>
 </html>
