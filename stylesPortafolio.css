@@ -41,7 +41,7 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Cambia de space-between a flex-end */
     align-items: center;
     padding: 1rem 5%;
     background-color: var(--secondary-color);
@@ -56,6 +56,11 @@ header {
     border-left: 0;
     border-right: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Si quieres que el menú hamburguesa esté justo a la derecha del menú de navegación: */
+.hamburger-menu {
+    margin-left: 1.5rem; /* Espacio entre el menú y el botón */
 }
 
 .header-container ul {
@@ -105,32 +110,6 @@ header {
 
 .dropdown-item:hover {
     background-color: var(--primary-color);
-}
-
-/* Language Toggle Button */
-#language-toggle {
-    top: 120px;
-    left: 30px;
-    z-index: 1100;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-#language-toggle .lang-es,
-#language-toggle .lang-en {
-    display: inline-block;
-}
-
-#language-toggle .lang-es.hidden,
-#language-toggle .lang-en.hidden {
-    display: none;
 }
 
 /* Profile Section */

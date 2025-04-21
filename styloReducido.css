@@ -4,15 +4,17 @@
     .header-container {
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end; /* Alinea todo a la derecha */
         align-items: center;
         padding: 1rem 5%;
         margin-top: 0%;
+        flex-direction: row;
     }
 
     .logo {
         font-weight: bold;
         font-size: 1.2rem;
+        display: none !important;
     }
 
     .hamburger-menu {
@@ -195,6 +197,14 @@
     .social-button{
         align-content: center;
     }
+
+    .profile-overlay {
+        padding: 1rem 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 @media (min-width: 769px) {
@@ -245,6 +255,54 @@
     }
 
     .profile-overlay {
+        padding: 0.7rem 0.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .email-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        word-break: break-all;
+        flex-wrap: nowrap;
+    }
+
+    #email-text {
+        font-size: 0.98rem;
+        word-break: break-all;
+        text-align: left;
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .btn-cv {
+        margin-top: 0.7rem;
+        width: 100%;
+        max-width: 220px;
+        text-align: center;
+        align-self: center;
+        font-size: 1rem;
+    }
+
+    .profile-overlay {
         padding: 1.5rem;
         align-items: center;
     }
@@ -273,6 +331,7 @@
     }
     
 }
+
 
 /* Animacion scroll */
 @keyframes titulosM {
@@ -307,3 +366,6 @@
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
+
+/* Elimina cualquier regla específica de .email-row, #email-text y #copy-email-btn dentro de media queries para .profile-overlay */
+/* Si tienes reglas generales para .email-row, mantenlas para la sección de contacto */
