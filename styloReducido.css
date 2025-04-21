@@ -205,6 +205,27 @@
         width: 100%;
         box-sizing: border-box;
     }
+
+    .email-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    #email-text {
+        font-size: 0.98rem;
+        word-break: break-all;
+        max-width: 70vw;
+        overflow-x: auto;
+        text-align: left;
+    }
+    #copy-email-btn {
+        flex-shrink: 0;
+    }
 }
 
 @media (min-width: 769px) {
@@ -278,17 +299,17 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0.3rem;
         width: 100%;
         word-break: break-all;
         flex-wrap: nowrap;
     }
 
     #email-text {
-        font-size: 0.98rem;
+        font-size: 0.95rem;
         word-break: break-all;
         text-align: left;
-        max-width: 100%;
+        max-width: 50vw;
         display: block;
         overflow-x: auto;
     }
@@ -328,6 +349,10 @@
         margin-left: 2%;
         margin-right: 5%;
         box-shadow: 10px 10px black;
+    }
+    #copy-email-btn {
+        font-size: 0.95rem;
+        padding: 0.2rem 0.4rem;
     }
     
 }
