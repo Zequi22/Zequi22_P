@@ -570,15 +570,8 @@ header {
 /* Sección de Contacto */
 .contact {
     padding: 6rem 0;
-    padding: 6rem 0;
-    margin: 11%;
-    margin-left: 25%;
-    margin-right: 25%;
-    background: rgb(54, 173, 241);
-    border:5px solid #030303;
-    box-shadow: 20px 15px black;
-     border-top-right-radius: 30px;
-     border-bottom-left-radius: 30px;
+    border-bottom: solid 5px #030303;
+    background: var(--accent-color);
 }
 
 .contact-methods {

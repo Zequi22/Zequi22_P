@@ -1,10 +1,11 @@
-/* Responsive Design */
+/* -------------------- Responsive Design -------------------- */
 @media (max-width: 768px) {
 
+    /* Header y navegación */
     .header-container {
         position: relative;
         display: flex;
-        justify-content: flex-end; /* Alinea todo a la derecha */
+        justify-content: flex-end;
         align-items: center;
         padding: 1rem 5%;
         margin-top: 0%;
@@ -37,11 +38,9 @@
     .hamburger-menu.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-
     .hamburger-menu.active span:nth-child(2) {
         opacity: 0;
     }
-
     .hamburger-menu.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
@@ -53,7 +52,7 @@
     .nav-menu {
         position: fixed;
         top: 60px;
-        left: -100%;
+        right: 5%;
         width: 250px;
         height: auto;
         background-color: var(--primary-color);
@@ -66,14 +65,12 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: 0.3s;
         z-index: 1000;
-        right: 5%;
         transform: translateX(100%);
         opacity: 0;
         visibility: hidden;
     }
 
     .nav-menu.active {
-        left: auto;
         right: 5%;
         transform: translateX(0);
         opacity: 1;
@@ -90,6 +87,7 @@
         padding: 0.5rem 1rem;
     }
 
+    /* Perfil */
     .profile-content {
         grid-template-columns: 1fr;
         flex-direction: column;
@@ -105,26 +103,33 @@
         text-align: center;
     }
 
+    .profile-overlay {
+        padding: 1rem 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Sobre mí */
     .about-content {
         flex-direction: column;
         grid-template-columns: 1fr;
         text-align: center;
+        margin: 15%;
     }
-    .speech-bubble{
+    .speech-bubble {
         max-width: 90%;
         margin: 0 auto;
         padding: 1rem;
     }
-
+    /* Contacto */
     .contact-methods {
         grid-template-columns: 1fr;
-       
     }
-    .contact{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+ 
 
+    /* Habilidades y proyectos */
     .skills-grid,
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -137,7 +142,6 @@
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-       
     }
 
     .project-card {
@@ -154,6 +158,7 @@
         margin: 0.25rem;
     }
 
+    /* Menú desplegable de proyectos */
     .nav-projects .dropdown-menu {
         display: none;
         position: static;
@@ -179,6 +184,7 @@
         color: var(--primary-color);
     }
 
+    /* Video de perfil */
     .video-container {
         height: 300px;
     }
@@ -194,18 +200,11 @@
     .profile-pic {
         max-width: 200px;
     }
-    .social-button{
+    .social-button {
         align-content: center;
     }
 
-    .profile-overlay {
-        padding: 1rem 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
+    /* Email row (para sección de contacto) */
     .email-row {
         display: flex;
         flex-direction: row;
@@ -228,20 +227,23 @@
     }
 }
 
+/* Menú hamburguesa oculto en escritorio */
 @media (min-width: 769px) {
     .hamburger-menu {
         display: none;
     }
 }
-/* Media Query para pantallas más pequeñas */
+
+/* Ajustes extra para pantallas pequeñas */
 @media (max-width: 768px) {
     .project-screenshot {
-        height: 200px; /* Reducir la altura de las imágenes en pantallas más pequeñas */
+        height: 200px;
     }
 }
 
 @media (max-width: 480px) {
 
+    /* Grids a una sola columna */
     .skills-grid,
     .project-grid {
         grid-template-columns: 1fr;
@@ -252,22 +254,18 @@
     }
 
     .video-container {
-
-        height: 300px; /* Aumenta la altura del contenedor */
-        display: flex; /* Usa flexbox para centrar el video */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        overflow: hidden; /* Evita que el video se desborde */
-
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 
     .background-video {
-       
-        width: auto; /* Permite que el ancho se ajuste */
-        height: 100%; /* El video ocupa toda la altura del contenedor */
-        max-width: none; /* Elimina cualquier restricción de ancho máximo */
-        object-fit: contain; /* Asegura que el video se ajuste al contenedor manteniendo su relación de aspecto */
-  
+        width: auto;
+        height: 100%;
+        max-width: none;
+        object-fit: contain;
     }
 
     .profile-content {
@@ -345,20 +343,38 @@
         font-size: 0.9rem;
         padding: 1.5rem;
     }
-    .contact{
-        margin-left: 2%;
-        margin-right: 5%;
-        box-shadow: 10px 10px black;
-    }
+    
     #copy-email-btn {
         font-size: 0.95rem;
         padding: 0.2rem 0.4rem;
     }
-    
+
+    /* Grid de habilidades en dos columnas y menos espacio */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem;
+        padding: 1rem 0;
+        margin: 2% !important;
+    }
+
+    .skill-item {
+        max-width: 100%;
+        font-size: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    .habilidadImagen {
+        font-size: 2.2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .skills {
+        padding: 2.5rem 0 !important;
+    }
 }
 
-
-/* Animacion scroll */
+/* -------------------- Animaciones -------------------- */
 @keyframes titulosM {
     from {
         opacity: 0;
@@ -370,8 +386,8 @@
     }
 }
 
-.section-title{
-    animation: titulosM  linear;
+.section-title {
+    animation: titulosM linear;
     animation-timeline: view();
     animation-range: entry 0% cover 25%;
 }
@@ -386,11 +402,8 @@
         scale: 1;
     }
 }
-.skill-item , .training-item , .about-content, .project-card{
-    animation: appear  linear;
+.skill-item, .training-item, .about-content, .project-card {
+    animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
-
-/* Elimina cualquier regla específica de .email-row, #email-text y #copy-email-btn dentro de media queries para .profile-overlay */
-/* Si tienes reglas generales para .email-row, mantenlas para la sección de contacto */
