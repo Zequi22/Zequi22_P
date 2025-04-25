@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #1a1a2e;  
-    --header-content: #BBBBBB;
-    --secondary-color: #516783;  
-    --background-color: #0f0f0f;  
-    --tersary-color: beige;
-    --text-color: #ffffff; 
-    --text-tittle: #030303; 
-    --accent-color: #6B8E9F;  /* Azul claro */
+    --primary-color: #6e5849;        /* Marrón suave */
+    --header-content: #ecd6b9;       /* Mantener este color */
+    --secondary-color: #b8a89a;      /* Marrón claro/crema */
+    --background-color: #f7f5f2;     /* Crema muy claro */
+    --tersary-color: #ffffff;        /* Blanco */
+    --text-color: #3a3a3a;           /* Gris oscuro para texto */
+    --text-tittle: #6e5849;          /* Marrón suave para títulos */
+    --accent-color: #d6cfc7;         /* Gris claro */
     --white: #ffffff;
 }
 
@@ -628,75 +628,35 @@ header {
     color: var(--accent-color);
 }
 
-.email-row {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.2rem;
-    background: transparent;
+.copy-btn-simple {
+    background: none;
     border: none;
-    padding: 0;
-    width: fit-content;
-}
-
-.email-row .email-icon,
-#copy-email-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid var(--primary-color);
-    background: transparent;
+    color: #333;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    transition: background 0.3s, color 0.3s;
     cursor: pointer;
-    margin: 0;
-    padding: 0;
-}
-
-.email-row .email-icon:hover,
-#copy-email-btn:hover {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-#email-text {
-    color: var(--primary-color);
-    font-weight: 500;
     font-size: 1.1rem;
-    user-select: all;
-    background: transparent;
+    margin: 0;
+    box-shadow: none;
     padding: 0 0.5rem;
-    border-radius: 8px;
-    transition: background 0.2s;
-    margin: 0 0.3rem;
 }
 
-#copy-email-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.2rem 0.4rem;
-    border-radius: 50%;
+.copy-btn-simple i {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-right: 0.3rem;
+}
+
+#copy-label {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.email-row-simple {
     display: flex;
     align-items: center;
-    transition: background 0.2s;
-}
-
-#copy-email-btn:hover {
-    background: var(--primary-color);
-}
-
-#copy-email-btn i {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    transition: color 0.2s;
-}
-
-#copy-email-btn:hover i {
-    color: var(--white);
+    gap: 0.7rem;
+    margin-top: 0.5rem;
 }
 

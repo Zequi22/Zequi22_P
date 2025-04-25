@@ -36,7 +36,7 @@
                 <div class="profile-content">
                     <div class="video-container">
                         <video class="background-video" autoplay muted playsinline>
-                            <source src="./Imagenes/presentacion.mp4" type="video/mp4">
+                            <source src="./Imagenes/modelo-beige.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="profile-overlay">
@@ -198,10 +198,11 @@
                         <i class="fas fa-envelope"></i>
                         <div class="method-details">
                             <h3>Correo Electrónico</h3>
-                            <div class="email-row">
+                            <div class="email-row-simple">
                                 <span id="email-text">ezequiel.cam.mar.22@gmail.com</span>
-                                <button id="copy-email-btn" title="Copiar correo">
+                                <button id="copy-email-btn-simple" class="copy-btn-simple">
                                     <i class="fas fa-clipboard"></i>
+                                    <span id="copy-label">Copiar</span>
                                 </button>
                             </div>
                         </div>
@@ -214,15 +215,20 @@
     <script src="language.js"></script>
     <script src="menu.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var copyBtn = document.getElementById('copy-email-btn');
-            if (copyBtn) {
-                copyBtn.addEventListener('click', function() {
-                    var email = document.getElementById('email-text').textContent;
-                    navigator.clipboard.writeText(email);
-                });
-            }
+document.addEventListener('DOMContentLoaded', function() {
+    var copyBtn = document.getElementById('copy-email-btn-simple');
+    var copyLabel = document.getElementById('copy-label');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+            var email = document.getElementById('email-text').textContent;
+            navigator.clipboard.writeText(email);
+            copyLabel.textContent = 'Copiado';
+            setTimeout(function() {
+                copyLabel.textContent = 'Copiar';
+            }, 2000);
         });
-        </script>
+    }
+});
+</script>
 </body>
 </html>
