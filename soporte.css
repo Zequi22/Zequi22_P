@@ -1,0 +1,38 @@
+/* Media query para মোবাইল */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Oculta el menú en মোবাইল por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del header */
+        left: 0;
+        width: 100%;
+        background-color: white; /* Ajusta según sea necesario */
+        text-align: center;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .nav-menu.active {
+        display: flex; 
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    .skills-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill {
+        width: 30%;
+        margin: 2px;
+    }
+}
