@@ -35,16 +35,9 @@
         width: 30%;
         margin: 2px;
     }
-    .logo{
-        width: 30%;
-        margin-top: -30px;
-    }
+  
 }
 @media (min-width: 400px) {
-    .logo{
-        width: 40%;
-        margin-top: -30px;
-    }
     .hero-text {
         text-align: center;
 
