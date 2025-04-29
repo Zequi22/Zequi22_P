@@ -5,8 +5,16 @@
     scroll-behavior: smooth;
 }
 
+.karla {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Puedes usar .karla en cualquier elemento HTML */
+
 body {
-    font-family: 'Arial', sans-serif;
+    
     background-color: #f4f4f4;
 }
 
