@@ -1,3 +1,4 @@
+/* Reset y base */
 * {
     margin: 0;
     padding: 0;
@@ -5,62 +6,33 @@
     scroll-behavior: smooth;
 }
 
-.karla {
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-/* Puedes usar .karla en cualquier elemento HTML */
-
 body {
-    
     background-color: #f4f4f4;
+    font-family: "Karla", sans-serif;
 }
 
-/* Estilos para el header */
+/* Header */
 header {
     padding: 20px;
     width: 100%;
-    top: 0;
-    font-weight: bold;
     color: white;
     text-shadow: 2px 2px 4px black;
+    font-weight: bold;
 }
 
 .header-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.header-container a {
+.header-container a,
+.nav-menu a {
     color: white;
     text-decoration: none;
 }
 
-/* Logo */
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 24px 0;
-    margin-top: -10em;
-    margin-bottom: 0%;
-}
-
-.logo {
-    width: 300px;         /* Ajusta el tamaño según prefieras */
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;  /* Hace el logo redondo */
-    border: 16px solid #f4f4f4; /* Opcional: borde sutil */ 
-}
-
-/* Estilos para el menú */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -71,12 +43,7 @@ header {
     margin: 0 15px;
 }
 
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Estilos para el menú hamburguesa */
+/* Menú hamburguesa (no visible por defecto) */
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -85,7 +52,6 @@ header {
     height: 25px;
     cursor: pointer;
 }
-
 .hamburger-menu span {
     display: block;
     height: 3px;
@@ -94,7 +60,26 @@ header {
     transition: transform 0.3s ease;
 }
 
-/* hero */
+/* Logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -60px; /* Ajusta este valor según lo alto que quieras el logo */
+    margin: 0 0 24px 0; /* Elimina el margin negativo */
+    z-index: 2; /* Asegura que esté por encima del header si es necesario */
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 16px solid #f4f4f4;
+}
+
+/* Hero */
 .hero {
     background-image: url(./Imagenes/Imagen\ de\ WhatsApp\ 2025-04-27\ a\ las\ 17.46.58_390bad5f.jpg);
     background-size: cover;
@@ -114,168 +99,291 @@ header {
 }
 
 .hero-text {
-    font-size: clamp(1.5rem, 2vw + 1rem, 3rem); 
+    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
     text-shadow: 2px 2px 4px black;
 }
 
-
-
-/* Estilos para la sección Habilidades */
+/* Habilidades */
 #habilidades {
-    margin-top: 2%;
+    background: linear-gradient(120deg, #f5eee6 60%, #e9dcc9 100%);
+    padding: 64px 0;
+}
+
+#habilidades .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+#habilidades .section-title {
+    font-size: 2.4em;
+    color: #7c6f57;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 36px;
     text-align: center;
-    padding: 10px; /* Reducido el padding */
 }
 
-#habilidades h2 {
-    font-size: 1.5em; /* Reducido el tamaño del título */
-    margin-bottom: 10px; /* Reducido el margen inferior */
-    color: #333;
-}
-
-#habilidades h3 {
-    margin-top: 5%;
-    font-size: 1em; /* Reducido el tamaño del subtítulo */; 
-    margin-bottom: 15px; /* Reducido el margen inferior */
-    color: #555;
-}
-
-.skills-container {
+.skills-groups {
     display: flex;
     flex-wrap: wrap;
+    gap: 48px;
     justify-content: center;
 }
 
-.skill {
-    width: 80px; /* Reducido el ancho */
-    margin: 5px; /* Reducido el margen */
-    padding: 5px; /* Reducido el padding */
-    border: none; /* Eliminado el borde */
-    border-radius: 5px;
+.skills-group {
+    flex: 1 1 350px;
+    background: #fffaf3;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(124, 111, 87, 0.10);
+    padding: 32px 24px 24px;
+    margin-bottom: 24px;
+    min-width: 320px;
+    max-width: 500px;
+}
+
+.skills-group-title {
+    font-size: 1.3em;
+    color: #a08d6f;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.skill-modern-card {
+    background: #f5eee6;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(124, 111, 87, 0.08);
+    padding: 22px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    min-height: 170px;
+    transition: transform 0.18s, box-shadow 0.18s;
+    position: relative;
+}
+
+.skill-modern-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(124, 111, 87, 0.15);
+    background: #e2c799;
+}
+
+.skill-modern-icon {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+    background: #fffaf3;
+    border-radius: 50%;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(124, 111, 87, 0.08);
+    transition: background 0.3s, color 0.3s;
+}
+
+.skill-modern-card:hover .skill-modern-icon {
+    background: #fff;
+    color: #7c6f57 !important;
+}
+
+.skill-modern-title {
+    color: #7c6f57;
+    font-size: 1.08em;
+    font-weight: 700;
+    margin-bottom: 4px;
     text-align: center;
-    transition: all 0.3s ease;
-    background-color: transparent; /* Fondo transparente */
 }
 
-.skill:hover {
-    transform: translateY(-3px); /* Reducido el efecto de elevación */
-    box-shadow: none; /* Eliminada la sombra */
+.skill-modern-desc {
+    font-size: 0.97em;
+    color: #a08d6f;
+    text-align: center;
+    min-height: 32px;
 }
 
-.habilidadImagen {
-    font-size: 1.8em; /* Reducido el tamaño del icono */
-    margin-bottom: 3px; /* Reducido el margen inferior */
-}
-
-.skill h3 {
-    margin-bottom: 0;
-    color: #333;
-    font-size: 0.7em; /* Reducido el tamaño de la fuente */
-}
-
-/* Sección Sobre Mí */
+/* Sobre Mí */
 #sobre-mi {
-    background-color: #fff;
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);
+    padding: 60px 20px;
     margin-top: 40px;
 }
 
 #sobre-mi .container {
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 #sobre-mi .section-title {
-    font-size: 2em;
-    color: #333;
+    font-size: 2.2em;
+    color: #222;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
 #sobre-mi .about-content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 48px;
 }
 
 #sobre-mi .speech-bubble {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-#sobre-mi .speech-bubble p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    padding: 32px 28px;
+    text-align: left;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    font-size: 1.1em;
+    color: #444;
+    max-width: 420px;
+    line-height: 1.7;
 }
 
 #sobre-mi .about-image {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    border: 6px solid #e0e7ef;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+#sobre-mi .about-image:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
 }
 
 #sobre-mi .about-image img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Sección de Formaciones */
+/* Formaciones */
 #formaciones {
-    background-color: #f4f4f4;
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5eee6 60%, #e9dcc9 100%);
+    padding: 60px 0;
 }
 
 #formaciones .container {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 #formaciones .section-title {
-    font-size: 2em;
-    color: #333;
+    font-size: 2.4em;
+    color: #7c6f57;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
-#formaciones .trainings-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+#formaciones .trainings-timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 0 0;
+    max-width: 900px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#formaciones .trainings-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #e2c799;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 0;
 }
 
 #formaciones .training-item {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 48%;
+    background: #fffaf3;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(124, 111, 87, 0.07);
+    padding: 32px 36px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 1;
+}
+
+#formaciones .training-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(124, 111, 87, 0.13);
+}
+
+#formaciones .training-item.left {
+    align-self: flex-start;
+}
+
+#formaciones .training-item.right {
+    align-self: flex-end;
+}
+
+#formaciones .training-dot {
+    position: absolute;
+    top: 36px;
+    right: -34px;
+    width: 24px;
+    height: 24px;
+    background: #e2c799;
+    border: 4px solid #fffaf3;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(124, 111, 87, 0.13);
+}
+
+#formaciones .training-item.right .training-dot {
+    left: -34px;
+    right: auto;
 }
 
 #formaciones .training-item h3 {
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1.25em;
+    color: #7c6f57;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 #formaciones .training-item p {
     font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
+    color: #a08d6f;
+    margin-bottom: 12px;
 }
 
-#formaciones .training-item .training-year {
-    font-size: 0.9em;
-    color: #777;
+#formaciones .training-year {
+    font-size: 0.95em;
+    color: #b6a489;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
-/* Sección de Proyectos */
+/* Proyectos */
 #proyectos {
     background-color: #fff;
     padding: 40px 20px;
@@ -293,61 +401,6 @@ header {
     margin-bottom: 30px;
 }
 
-#proyectos .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-#proyectos .project-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-#proyectos .project-card:hover {
-    transform: translateY(-5px);
-}
-
-#proyectos .project-screenshot {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-#proyectos .project-info {
-    padding: 20px;
-}
-
-#proyectos .project-info h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#proyectos .project-info .project-desc {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-#proyectos .project-info .project-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#proyectos .project-info .project-link:hover {
-    background-color: #0056b3;
-}
-
 #proyectos .see-more-projects {
     text-align: center;
     margin-top: 30px;
@@ -361,42 +414,99 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 #proyectos .btn-see-more:hover {
     background-color: #218838;
 }
 
-/* Estilos para el footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.projects-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 24px;
 }
 
-footer p {
-    font-size: 0.9em;
+.project-modern-card {
+    background: #fffaf3;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(124, 111, 87, 0.13);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    transition: transform 0.22s, box-shadow 0.22s;
+    border: 1.5px solid #e2c799;
+    position: relative;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-    #sobre-mi .about-content {
-        flex-direction: column;
-    }
+.project-modern-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(124, 111, 87, 0.18);
+}
 
-    #sobre-mi .about-image {
-        margin-bottom: 20px;
-    }
+.project-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #e9dcc9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    #formaciones .trainings-grid {
-        grid-template-columns: 1fr;
-    }
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
 
-    #proyectos .project-grid {
-        grid-template-columns: 1fr;
-    }
+.project-modern-card:hover .project-img-wrapper img {
+    transform: scale(1.07) rotate(-1deg);
+}
+
+.project-modern-info {
+    padding: 28px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-modern-info h3 {
+    color: #7c6f57;
+    font-size: 1.22em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-modern-info p {
+    color: #a08d6f;
+    font-size: 1em;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.project-modern-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #e2c799 60%, #f5eee6 100%);
+    color: #7c6f57;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(124, 111, 87, 0.08);
+    transition: background 0.3s, color 0.3s;
+    border: none;
+    outline: none;
+}
+
+.project-modern-btn:hover {
+    background: linear-gradient(90deg, #f5eee6 60%, #e2c799 100%);
+    color: #222;
 }
 
