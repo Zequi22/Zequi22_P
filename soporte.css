@@ -95,6 +95,49 @@
         margin: 2px;
     }
 
+    /* Mejora de skills para móviles */
+    .skills-groups {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .skills-group {
+        width: 100%;
+        align-items: center;
+    }
+    .skills-flex {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .skill-modern-card {
+        min-width: 90px;
+        max-width: 110px;
+        width: 45vw;
+        margin: 4px 2px;
+        padding: 10px 4px;
+        border-radius: 10px;
+        font-size: 0.92em;
+        box-shadow: 0 2px 8px rgba(124, 111, 87, 0.07);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-modern-icon {
+        font-size: 1.7em;
+        margin-bottom: 4px;
+    }
+    .skill-modern-title {
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+    .skill-modern-desc {
+        font-size: 0.85em;
+        text-align: center;
+    }
+
     /* Timeline de formaciones */
     #formaciones .trainings-timeline {
         padding: 0;
