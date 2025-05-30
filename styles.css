@@ -23,8 +23,9 @@ header {
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Esto alinea verticalmente Zequi22 y el botón */
     width: 100%;
+    position: relative;
 }
 
 .header-container a,
@@ -66,7 +67,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -60px; /* Ajusta este valor según lo alto que quieras el logo */
+    top: -120px; /* Ajusta este valor según lo alto que quieras el logo */
     margin: 0 0 24px 0; /* Elimina el margin negativo */
     z-index: 2; /* Asegura que esté por encima del header si es necesario */
 }
@@ -76,7 +77,7 @@ header {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 16px solid #f4f4f4;
+    border: 12px solid #f4f4f4;
 }
 
 /* Hero */
@@ -302,7 +303,7 @@ header {
     margin: 0 auto;
     padding: 40px 0 0;
     max-width: 900px;
-    min-height: 300px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     gap: 40px;
