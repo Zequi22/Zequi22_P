@@ -140,17 +140,15 @@
 
     /* Timeline de formaciones */
     #formaciones .trainings-timeline {
-        padding: 0;
-        gap: 48px;
-        max-width: 100%;
-        min-width: 0;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        gap: 48px;
+        max-width: 100%;
     }
     #formaciones .trainings-timeline::before {
-        display: block;
         content: '';
         position: absolute;
         left: 50%;
@@ -170,26 +168,23 @@
         min-width: 120px;
         background: #fffaf3;
         z-index: 1;
-        position: relative;
-        margin: 0;
-        padding: 18px 10px;
+        margin: 32px auto 0 auto; /* Espacio arriba para la bola */
+        padding: 24px 10px 18px 10px; /* Menos padding arriba */
         box-sizing: border-box;
+        position: relative;
+        align-self: center;
     }
-    /* Alternar lados: impares a la izquierda, pares a la derecha */
-    #formaciones .training-item:nth-child(odd) {
-        align-self: flex-start;
-        margin-left: 0;
-        margin-right: auto;
+    #formaciones .training-item.right .training-dot,
+    #formaciones .training-item.left .training-dot {
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, -50%) !important;
     }
-    #formaciones .training-item:nth-child(even) {
-        align-self: flex-end;
-        margin-right: 0;
-        margin-left: auto;
-    }
-    /* Círculo alineado a la línea */
     #formaciones .training-dot {
         position: absolute;
-        top: 36px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
         width: 24px;
         height: 24px;
         background: #e2c799;
@@ -197,16 +192,6 @@
         border-radius: 50%;
         z-index: 2;
         box-shadow: 0 2px 8px rgba(124, 111, 87, 0.13);
-    }
-    #formaciones .training-item.left .training-dot,
-    #formaciones .training-item:nth-child(odd) .training-dot {
-        right: -34px;
-        left: auto;
-    }
-    #formaciones .training-item.right .training-dot,
-    #formaciones .training-item:nth-child(even) .training-dot {
-        left: -34px;
-        right: auto;
     }
 
     /* Proyectos responsive */

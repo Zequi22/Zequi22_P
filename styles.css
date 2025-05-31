@@ -77,15 +77,15 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -150px; /* Ajusta este valor según lo alto que quieras el logo */
-    margin: 0 0 24px 0; /* Elimina el margin negativo */
+    top: -120px; /* Ajusta este valor según lo alto que quieras el logo */
+    margin: 0; /* Elimina el margin negativo */
     z-index: 2; /* Asegura que esté por encima del header si es necesario */
     
 }
 
 .logo {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     border: 8px solid var(--color-secondary);
