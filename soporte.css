@@ -50,7 +50,7 @@
         min-width: 140px;
         max-width: 220px;
         background: #fffaf3;
-        border-radius: 0 0 0 16px;
+        border-radius: 16px;
         box-shadow: 0 4px 24px rgba(124, 111, 87, 0.08);
         z-index: 10;
         padding: 18px 0 12px 0;
@@ -216,11 +216,6 @@
 }
 
 /* Ajuste de texto en hero para pantallas pequeñas */
-@media (min-width: 400px) {
-    .hero-text {
-        text-align: center;
-    }
-}
 @media (max-width: 750px) {
 
    #formaciones .training-item,

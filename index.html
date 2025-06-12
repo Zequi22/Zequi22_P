@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./soporte.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./animation.css">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +16,8 @@
 
 </head>
 <body>
-    <section class="hero">
-        <header>
+  <!-- Header with Navigation -->
+<header>
             <nav>
                 <div class="header-container">
                     <a href="#">Zequi22</a>
@@ -34,18 +35,26 @@
                     </div>
                 </div>
         </header>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hola, soy Ezequiel</h1>
-                <p>Desarrollador </p>
+    <section class="logo-section" style="padding-top:0;">
+        <div class="logo-3d-flex" style="gap: 40px;">
+            <div class="model-3d-hang">
+                <model-viewer id="viewer3d"
+                    src="./modelo3D/tarjeta.glb"
+                    poster="./Imagenes/modelo3d-placeholder.png"
+                    shadow-intensity="1"
+                    style="width: 340px; height: 340px; background: transparent; border-radius: 12px; display:block; margin:0 auto;"
+                    disable-zoom
+                    disable-pan
+                    disable-tap
+                    autoplay
+                ></model-viewer>
+                <img id="fallback-img" src="./Imagenes/modelo3d-placeholder.png" alt="Modelo 3D" class="model-3d-img" style="display:none; width:340px; height:340px;">
             </div>
+            <picture class="logo-container">
+                <source media="(max-width: 150px)" srcset="./Imagenes/Logo-small.jpg">
+                <img src="./Imagenes/Logo.jpg" alt="Ezequiel's Logo" class="logo hexagon-logo">
+            </picture>
         </div>
-    </section>
-    <section class="logo-section">
-        <picture class="logo-container">
-            <source media="(max-width: 150px)" srcset="./Imagenes/Logo-small.jpg">
-            <img src="./Imagenes/Logo.jpg" alt="Ezequiel's Logo" class="logo">
-        </picture>
     </section>
     <section id="habilidades">
         <div class="container">
@@ -209,7 +218,7 @@
                 <div class="project-modern-info">
                     <h3>Buscador de juegos</h3>
                     <p>Aplicación web para buscar y filtrar videojuegos por plataforma, género y popularidad.</p>
-                    <a href="proyectos-completos.html" target="_blank" class="project-modern-btn">
+                    <a href="https://zequi22.github.io/BuscadorJuego/" target="_blank" class="project-modern-btn">
                         <i class="fas fa-external-link-alt"></i> Ver proyecto
                     </a>
                 </div>
@@ -233,6 +242,24 @@
         </div>
     </div>
 </section>
-    <script src="./menu.js"></script>
+<!-- Import the component -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<script>
+  // Mostrar imagen si el modelo 3D falla al cargar
+  const viewer = document.getElementById('viewer3d');
+  const fallback = document.getElementById('fallback-img');
+  viewer.addEventListener('error', () => {
+    viewer.style.display = 'none';
+    fallback.style.display = 'block';
+  });
+
+  // Avanza un frame de la animación y pausa
+  viewer.addEventListener('load', () => {
+    // Reproducir animación
+    viewer.currentTime = 0; // Aproximadamente un frame (30fps)
+    viewer.pause();
+  });
+</script>
+<script src="./menu.js"></script>
 </body>
 </html>

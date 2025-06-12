@@ -1,3 +1,6 @@
+/* =========================
+   Variables de color
+   ========================= */
 :root {
     --color-bg: #D9D9D9;
     --color-primary: #0F2940;
@@ -8,7 +11,9 @@
     --color-black: #000;
 }
 
-/* Reset y base */
+/* =========================
+   Reset y base
+   ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +26,16 @@ body {
     font-family: "Karla", sans-serif;
 }
 
-/* Header */
+/* =========================
+   Header y navegación
+   ========================= */
 header {
     padding: 20px;
     width: 100%;
     color: var(--color-white);
     text-shadow: 2px 2px 4px var(--color-black);
     font-weight: bold;
+    border: 5px solid black;
 }
 
 .header-container {
@@ -54,7 +62,7 @@ header {
     margin: 0 15px;
 }
 
-/* Menú hamburguesa (no visible por defecto) */
+/* Menú hamburguesa */
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -71,55 +79,85 @@ header {
     transition: transform 0.3s ease;
 }
 
-/* Logo */
+/* =========================
+   Logo y modelo 3D
+   ========================= */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: none !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.logo-3d-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px; /* Espacio entre el modelo 3D y el logo */
+}
+
+/* Contenedor del modelo 3D (sin fondo ni borde) */
+.model-3d-hang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    position: relative;
+}
+
+/* Modelo 3D inmóvil, grande y sin fondo extra */
+model-viewer#viewer3d {
+    pointer-events: none; /* Inmoviliza el modelo */
+    background: transparent !important;
+    width: 380px !important;
+    height: 380px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: block;
+}
+
+/* Imagen de fallback para el modelo 3D */
+.model-3d-img {
+    width: 380px;
+    height: 380px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+}
+
+/* Contenedor del logo */
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -120px; /* Ajusta este valor según lo alto que quieras el logo */
-    margin: 0; /* Elimina el margin negativo */
-    z-index: 2; /* Asegura que esté por encima del header si es necesario */
-    
+    position: static;
+    margin: 0;
+    z-index: 2;
 }
 
-.logo {
+/* Logo hexagonal */
+.hexagon-logo {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border-radius: 50%;
+    clip-path: polygon(
+        25% 6.7%, 75% 6.7%,
+        100% 50%, 75% 93.3%,
+        25% 93.3%, 0% 50%
+    );
     border: 8px solid var(--color-secondary);
-}
-#logo-section {
-    background: var(--color-secondary);
-}
-
-/* Hero */
-.hero {
-    background-image: url(./Imagenes/Imagen\ de\ WhatsApp\ 2025-04-27\ a\ las\ 17.46.58_390bad5f.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    min-height: 60vh;
-    color: var(--color-white);
-    background-color: var(--color-secondary);
+    background: var(--color-white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8rem;
-}
-
-.hero-text {
-    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
-    text-shadow: 2px 2px 4px var(--color-black);
-}
-
-/* Habilidades */
+/* =========================
+   Sección Habilidades
+   ========================= */
 #habilidades {
     background: var(--color-secondary);
     padding: 64px 0;
@@ -235,7 +273,9 @@ header {
     color: var(--color-white);
 }
 
-/* Sobre Mí */
+/* =========================
+   Sobre Mí
+   ========================= */
 #sobre-mi {
     background: var(--color-accent);
     padding: 60px 20px;
@@ -300,7 +340,9 @@ header {
     border-radius: 50%;
 }
 
-/* Formaciones */
+/* =========================
+   Formaciones
+   ========================= */
 #formaciones {
     background: var(--color-secondary);
     padding: 60px 0;
@@ -347,7 +389,7 @@ header {
 
 #formaciones .training-item {
     position: relative;
-    width: 48%;
+    width: 47.5%;
     background: var(--color-primary);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(15, 41, 64, 0.07);
@@ -407,7 +449,9 @@ header {
     letter-spacing: 1px;
 }
 
-/* Proyectos */
+/* =========================
+   Proyectos
+   ========================= */
 #proyectos {
     background-color: var(--color-accent);
     padding: 40px 20px;
