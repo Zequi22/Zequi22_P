@@ -84,7 +84,6 @@
         color: #fff;
     }
 
-    /* Skills responsive ejemplo */
     .skills-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -95,7 +94,6 @@
         margin: 2px;
     }
 
-    /* Mejora de skills para móviles */
     .skills-groups {
         flex-direction: column;
         gap: 18px;
@@ -124,17 +122,13 @@
         align-items: center;
     }
     .skill-modern-icon {
-        font-size: 1.7em;
-        margin-bottom: 4px;
+        font-size: 2.2em;
+        margin-bottom: 6px;
     }
     .skill-modern-title {
         font-size: 1em;
         font-weight: 600;
         margin-bottom: 2px;
-        text-align: center;
-    }
-    .skill-modern-desc {
-        font-size: 0.85em;
         text-align: center;
     }
 
