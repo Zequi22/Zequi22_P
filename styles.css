@@ -162,22 +162,42 @@ model-viewer#viewer3d {
     align-items: center;
     position: static;
     margin: 0;
+    margin-top: 5%;
     z-index: 2;
+  
 }
 
-/* Logo hexagonal */
+/* Borde exterior para el hexágono del logo */
+.hexagon-border {
+    display: inline-block;
+    padding: 12px;
+    background: linear-gradient(
+        120deg,
+        var(--color-accent) 0%,
+        var(--color-primary) 50%,
+        var(--color-accent) 100%
+    );
+    background-size: 200% 200%;
+    clip-path: polygon(
+        25% 6.7%, 75% 6.7%,
+        100% 50%, 75% 93.3%,
+        25% 93.3%, 0% 50%
+    );
+    box-shadow: 0 0 32px 6px var(--color-accent);
+}
+
 .hexagon-logo {
-    width: 250px;
-    height: 250px;
+    width: 290px;
+    height: 290px;
     object-fit: cover;
     clip-path: polygon(
         25% 6.7%, 75% 6.7%,
         100% 50%, 75% 93.3%,
         25% 93.3%, 0% 50%
     );
-    border: 8px solid var(--color-secondary);
     background: var(--color-white);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border: none; 
+    display: block;
 }
 
 /* =========================

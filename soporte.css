@@ -238,6 +238,59 @@
     }
 }
 
+/* Responsive para modelo 3D y logo en pantallas pequeñas */
+@media (max-width: 700px) {
+    .logo-3d-flex {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .model-3d-hang,
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .model-3d-hang model-viewer,
+    .model-3d-img {
+        width: 90vw !important;
+        max-width: 320px !important;
+        height: 90vw !important;
+        max-height: 320px !important;
+    }
+    .logo-container .hexagon-logo {
+        width: 200px;
+        height: 200px;
+        min-width: 120px;
+        min-height: 120px;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        gap: 18px;
+        align-items: stretch;
+        padding-left: 16px;   
+        padding-right: 16px;
+    }
+    .contact-item {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        min-width: unset;
+        padding: 12px 6px;
+    }
+    .contact-email {
+        font-size: 0.98em;
+        word-break: break-all;
+        text-align: center;
+    }
+    
+    .copy-btn {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+}
+
 /* Animación menú */
 @keyframes menuFadeIn {
     from { opacity: 0; transform: translateY(-16px);}

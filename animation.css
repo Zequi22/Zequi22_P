@@ -73,3 +73,32 @@
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
+
+
+
+/* Animación del logo */
+@keyframes movelogo {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.logo-container {
+    animation: movelogo 5.2s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hexagon-border {
+    animation: shine 4s linear infinite;
+}
