@@ -284,6 +284,9 @@
         word-break: break-all;
         text-align: center;
     }
+    .contact-link{
+        font-size: 1.5em;
+    }
     
     .copy-btn {
         margin-left: 0;

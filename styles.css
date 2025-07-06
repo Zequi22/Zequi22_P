@@ -174,7 +174,8 @@ model-viewer#viewer3d {
     background: linear-gradient(
         120deg,
         var(--color-accent) 0%,
-        var(--color-primary) 50%,
+        var(--color-white) 30%,
+        var(--color-accent) 50%,
         var(--color-accent) 100%
     );
     background-size: 200% 200%;
@@ -183,7 +184,7 @@ model-viewer#viewer3d {
         100% 50%, 75% 93.3%,
         25% 93.3%, 0% 50%
     );
-    box-shadow: 0 0 32px 6px var(--color-accent);
+
 }
 
 .hexagon-logo {
@@ -198,6 +199,8 @@ model-viewer#viewer3d {
     background: var(--color-white);
     border: none; 
     display: block;
+    
+    
 }
 
 /* =========================
